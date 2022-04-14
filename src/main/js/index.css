@@ -135,7 +135,7 @@
   position: relative;
   display: -ms-grid;
   display: grid;
-  grid-gap: 10rem;
+  grid-gap: 3rem;
   -ms-grid-columns: 1.5fr 1fr;
       grid-template-columns: 1.5fr 1fr;
   margin: 0 7rem;
@@ -144,6 +144,33 @@
 #home a {
   text-decoration: none;
   color: inherit;
+}
+
+@media only screen and (max-width: 1250px) {
+  #home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    grid-gap: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #home {
+    margin: 0 2em;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  #home {
+    grid-gap: 10rem;
+  }
 }
 
 /* Not Found */
@@ -237,7 +264,8 @@
 
 #story #story__container__image .story__container__image__wide {
   height: 100%;
-  width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #story #story__container__image__title {
@@ -261,11 +289,30 @@
 }
 
 #story #story__container__text p {
-  font-size: 2rem;
   color: #a5a5a5;
   letter-spacing: -0.003em;
   line-height: 32px;
   font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 500px) {
+  #story__container__image {
+    margin-bottom: 0 !important;
+  }
+  #story__container__image .story__container__image__wide {
+    height: 80% !important;
+    margin-bottom: 0 !important;
+  }
+  #story__container__image #story__container__text {
+    -ms-grid-columns: 70% !important;
+        grid-template-columns: 70% !important;
+  }
+  #story__container__image #story__container__text p {
+    font-size: 1.5rem !important;
+    color: #a5a5a5;
+    letter-spacing: -0.003em;
+    line-height: 28px !important;
+  }
 }
 
 #navigation {
@@ -493,6 +540,7 @@
   #post {
     -ms-grid-columns: 2fr 1fr;
         grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
   }
   #post .post__column:nth-child(2) {
     width: auto;
@@ -501,7 +549,7 @@
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 800px) {
   #post {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -567,7 +615,7 @@
 
 @media only screen and (max-width: 1250px) {
   #new__writer__container {
-    display: none;
+    position: relative;
   }
 }
 

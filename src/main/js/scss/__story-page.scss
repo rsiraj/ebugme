@@ -15,7 +15,7 @@
 
         .story__container__image__wide {
             height: 100%;
-            width: 100%;
+            justify-self: center;
         }
     }
 
@@ -34,11 +34,29 @@
         grid-template-columns: 60%;
         justify-content: center;
         p {
-            font-size: 2rem;
             color: #a5a5a5;
             letter-spacing: -0.003em;
             line-height: 32px;
             font-size: 1.4rem;
         }
     }
+}
+
+@media only screen and (max-width: 500px) {
+    #story__container__image {
+        margin-bottom: 0 !important;
+    .story__container__image__wide {
+        height: 80% !important;
+        margin-bottom: 0 !important;
+    }
+    #story__container__text {
+        grid-template-columns: 70% !important;
+        p {
+            font-size: 1.5rem !important;
+            color: #a5a5a5;
+            letter-spacing: -0.003em;
+            line-height: 28px !important;
+        }
+    }
+}
 }
